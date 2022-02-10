@@ -1,0 +1,392 @@
+/* Colores obtenidos de la paleta en la siguientes url:
+https://coolors.co/797d62-9b9b7a-d9ae94-f1dca7-fcf8ed-ffcb69-d08c60-997b66
+*/
+
+
+/* Paleta de colores */
+
+$bodyLetters: #800000;
+$linkHover: #FFAAAA;
+$linkRegular: #800000;
+$linkVisited: #800000;
+$fildsetBackground: white;
+$titlesTextColor: white;
+@media only screen and (max-width: 898px) {
+    aside.seccionRedesSociales {
+        padding-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    aside.seccionRedesSociales {
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    aside.seccionRedesSociales {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    aside p {
+        visibility: hidden;
+    }
+    .menu li {
+        font-size: small;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        width: 0%;
+        color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        width: 100%;
+        color: rgba(255, 255, 255, 100);
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+$backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
+@mixin marginSimetrico($direccion, $valor) {
+    @if $direccion==vertical {
+        margin: $valor 0 $valor 0;
+    }
+    @else if $direccion==horizontal {
+        margin: 0 $valor 0 $valor;
+    }
+    @else {
+        @error "Dirección desconocida #{$direccion}";
+    }
+}
+
+@for $size from 1 to 5 {
+    $fontSizeMax: 36;
+    h#{$size} {
+        $newSize: calc(($fontSizeMax / ($size + 1)) + 10);
+        font-size: #{$newSize}px;
+        // @debug nuevo valor $newSize;
+    }
+}
+
+
+/* nomalización de elementos de lista para boostrap */
+
+dl,
+ol,
+ul {
+    margin-bottom: 0px;
+    li {
+        color: #A9B6CC;
+    }
+}
+
+
+/* Estilos generales */
+
+body {
+    margin: 0px;
+    background: url("../img/background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: $bodyLetters;
+    font-family: 'Catamaran', sans-serif;
+    section article {
+        background-color: $backgroundWhiteAlpha;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 10px;
+    width: 100vw;
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    color: $titlesTextColor;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom, #500000, #871414, #500000);
+    width: 100%;
+    margin-bottom: 3px;
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+
+h2 {
+    color: $titlesTextColor;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 0px 10px 0px;
+    background-image: linear-gradient(to bottom, #871414 20%, #500000 75%, #871414 5%);
+    border: 1px solid #914141;
+    width: 100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-out;
+}
+
+h3 {
+    width: 100%;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+}
+
+fieldset {
+    background-color: $fildsetBackground;
+    width: 100%;
+    legend {
+        font-size: 18px;
+    }
+}
+
+.gridMenu {
+    display: grid;
+    grid-template-areas: "asideIzq ulIzq logo ulDer asideDer" "div div div div div";
+    grid-template-rows: 100px 40px;
+    grid-template-columns: 2.5fr 2.5fr 150px 3.5fr 1.5fr;
+}
+
+#logo {
+    height: 150px;
+    overflow: auto;
+}
+
+.logoContainer {
+    grid-area: logo;
+    background-color: $backgroundWhiteAlpha;
+    width: 100%;
+    text-align: center;
+}
+
+.menu {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-weight: bold;
+    background-color: $backgroundWhiteAlpha;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    li {
+        display: inline-block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        img {
+            padding-right: 5px;
+        }
+    }
+    a:visited {
+        color: $linkVisited;
+    }
+    a:link {
+        color: $linkRegular;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $linkHover;
+    }
+}
+
+.gridMenu__menuIzquierda--definirGrid {
+    grid-area: ulIzq;
+}
+
+.gridMenu__menuDerecha--definirGrid {
+    grid-area: ulDer;
+}
+
+.asideIzq {
+    grid-area: asideIzq;
+    background-color: $backgroundWhiteAlpha;
+    border-radius: 0 0 0 10px;
+}
+
+.seccionRedesSociales {
+    text-align: right;
+    color: #808080;
+    padding: 40px 30px 0 0;
+    font-size: 14px;
+    grid-area: asideDer;
+    background-color: $backgroundWhiteAlpha;
+    border-radius: 0 0 10px 0;
+}
+
+.backgroundTransparent {
+    background: none;
+}
+
+.fullWidth {
+    width: 100%;
+    display: block;
+}
+
+.divInferior {
+    grid-area: div;
+}
+
+.redesSocialesLinks {
+    li {
+        display: inline-block;
+        font-family: 'Catamaran', sans-serif;
+    }
+    a img {
+        width: 16px;
+        height: 16px;
+        margin-left: 0.5rem;
+    }
+}
+
+
+/* Maquetación del contenido de las páginas */
+
+.article__h2--icono {
+    @include marginSimetrico(horizontal,
+    5px);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #8a1e1e;
+}
+
+main section {
+    article {
+        margin-bottom: 1rem;
+    }
+    article:last-child {
+        margin-bottom: 3rem;
+    }
+}
+
+
+/* Maquetación del banner inicial */
+
+.article__banner--setFormato {
+    border: 8px solid $backgroundWhiteAlpha;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Estilo para los elementos de la página home */
+
+#contenido {
+    padding: 0.1em 0px 0.11rem 0px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0px 10px 20px 10px;
+    text-align: center;
+    p {
+        text-align: left;
+    }
+}
+
+
+/* Estilos para las galería de imágenes */
+
+.galeria {
+    @include marginSimetrico(horizontal,
+    2px);
+    display: flex;
+    border: 1px solid #914141;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: $backgroundWhiteAlpha;
+    .imagenGaleria {
+        @include marginSimetrico(vertical,
+        10px);
+        width: 200px;
+        height: 200px;
+        border: 5px solid #A9B6CC;
+        padding: 4px;
+        background-color: $titlesTextColor;
+    }
+    .imagenGaleria:hover {
+        background-color: $linkHover;
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+        transition: transform 1s;
+        border-color: plum;
+    }
+}
+
+
+/* Estilo para la página de recetas */
+
+.section__card--setFormato {
+    margin: 10px;
+    padding: 5px;
+    border: 1px dashed gray;
+    background-color: #500000;
+    color: $titlesTextColor;
+}
+
+.section__card--setFormato:hover {
+    animation: heartBeat;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.articleReceta__cardTitle--setFormato {
+    font-weight: bold;
+}
+
+.whatsappIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    z-index: 10;
+}
+
+.body__footer--setFormato {
+    color: #808080;
+    background-color: $titlesTextColor;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.footer__emailLink--setFormato {
+    color: #808080;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.footer__leyenda--setFormato {
+    word-spacing: 20px;
+}
+
+.panel-title {
+    a:active {
+        color: $titlesTextColor;
+    }
+    a:hover {
+        color: $linkHover;
+    }
+    a:link {
+        color: $titlesTextColor;
+    }
+}

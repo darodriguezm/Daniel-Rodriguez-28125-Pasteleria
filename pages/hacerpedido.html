@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selecciona los sabores que más te gusten y comunícate con nosotros para planificar la elaboración y entrega de lo que más te guste">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&family=Exo+2:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Amazing Grace - Hacer pedido</title>
+</head>
+
+<body class="container-fluid">
+    <header class="gridMenu row">
+        <aside class="asideIzq"></aside>
+        <ul class="menu gridMenu__menuIzquierda--definirGrid">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="quienessomos.html">Quienes somos</a></li>
+        </ul>
+        <section class="logoContainer">
+            <img src="../img/logo.png" alt="" id="logo">
+        </section>
+        <ul class="menu gridMenu__menuDerecha--definirGrid">
+            <li><a href="galeriaproductos.html">Galería</a></li>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="hacerpedido.html">Hacer pedido</a></li>
+        </ul>
+        <aside class="seccionRedesSociales">
+            <ul class="redesSocialesLinks">
+                <li>
+                    <a href="http://www.instagram.com/pasteleria_amazinggrace"><img src="../img/instagram.png"></a>
+                </li>
+                <li>
+                    <a href="http://www.twitter.com/pasteleria_amazinggrace"><img src="../img/twitter.png"></a>
+                </li>
+                <li>
+                    <a href="http://www.facebook.com/amazingpasteleria"><img src="../img/facebook.png"></a>
+                </li>
+                <li>
+                    <a href="http://www.pinterest.com/amazingpasteleria"><img src="../img/pinterest.png"></a>
+                </li>
+            </ul>
+            <p>Redes sociales</p>
+        </aside>
+        <div class="divInferior"></div>
+    </header>
+    <main class="row">
+        <section class="container">
+            <article class="row pl-2 pr-2">
+                <h1>Formulario de pedidos</h1>
+                <p>Ingresa tus datos en nuestro formulario de contacto y cuéntanos con qué producto(s) podemos brindarte nuestros servicios.</p>
+                <form class="animate__animated animate__zoomIn">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input class="form-control col-md-8" type="text" name="nombre" placeholder="Primer nombre">
+                        <input class="form-control col-md-8" type="text" name="apellido" placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input class="form-control col-md-8" type="text" name="correo" placeholder="ejemplo: mimail@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Número de celular</label>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <input class="form-control col-md-3" type="text" name="area" placeholder="Código de área" size="2">
+                                <em class="col-md-1"> - </em>
+                                <input class="form-control col-md-6" type="text" name="telefono" placeholder="Número de teléfono">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="calle">Dirección completa</label>
+                        <input class="form-control col-md-8" type="text" name="calle" placeholder="Dirección de la calle">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <input class="form-control col-md-3" type="text" name="ciudad" placeholder="Ciudad">
+                                <input class="form-control col-md-3" type="text" name="estado" placeholder="Estado o provincia">
+                                <input class="form-control col-md-3" type="text" name="codigopostal" placeholder="Código postal">
+                                <select class="form-control col-md-3" name="pais" id="pais">
+                                <option>Afganistán</option>
+                                <option>Albania</option>
+                                <option>Alemania</option>
+                                <option>Andorra</option>
+                                <option>Angola</option>
+                                <option>Antigua y Barbuda</option>
+                                <option>Arabia Saudita</option>
+                                <option>Argelia</option>
+                                <option>Argentina</option>
+                                <option>Armenia</option>
+                                <option>Australia</option>
+                                <option>Austria</option>
+                                <option>Azerbaiyán</option>
+                                <option>Bahamas</option>
+                                <option>Bangladés</option>
+                                <option>Barbados</option>
+                                <option>Baréin</option>
+                                <option>Bélgica</option>
+                                <option>Belice</option>
+                                <option>Benín</option>
+                                <option>Bielorrusia</option>
+                                <option>Birmania</option>
+                                <option>Bolivia</option>
+                                <option>Bosnia y Herzegovina</option>
+                                <option>Botsuana</option>
+                                <option>Brasil</option>
+                                <option>Brunéi</option>
+                                <option>Bulgaria</option>
+                                <option>Burkina Faso</option>
+                                <option>Burundi</option>
+                                <option>Bután</option>
+                                <option>Cabo Verde</option>
+                                <option>Camboya</option>
+                                <option>Camerún</option>
+                                <option>Canadá</option>
+                                <option>Catar</option>
+                                <option>Chad</option>
+                                <option selected>Chile</option>
+                                <option>China</option>
+                                <option>Chipre</option>
+                                <option>Ciudad del Vaticano</option>
+                                <option>Colombia</option>
+                                <option>Comoras</option>
+                                <option>Corea del Norte</option>
+                                <option>Corea del Sur</option>
+                                <option>Costa de Marfil</option>
+                                <option>Costa Rica</option>
+                                <option>Croacia</option>
+                                <option>Cuba</option>
+                                <option>Dinamarca</option>
+                                <option>Dominica</option>
+                                <option>Ecuador</option>
+                                <option>Egipto</option>
+                                <option>El Salvador</option>
+                                <option>Emiratos Árabes Unidos</option>
+                                <option>Eritrea</option>
+                                <option>Eslovaquia</option>
+                                <option>Eslovenia</option>
+                                <option>España</option>
+                                <option>Estados Unidos</option>
+                                <option>Estonia</option>
+                                <option>Etiopía</option>
+                                <option>Filipinas</option>
+                                <option>Finlandia</option>
+                                <option>Fiyi</option>
+                                <option>Francia</option>
+                                <option>Gabón</option>
+                                <option>Gambia</option>
+                                <option>Georgia</option>
+                                <option>Ghana</option>
+                                <option>Granada</option>
+                                <option>Grecia</option>
+                                <option>Guatemala</option>
+                                <option>Guyana</option>
+                                <option>Guinea</option>
+                                <option>Guinea ecuatorial</option>
+                                <option>Guinea-Bisáu</option>
+                                <option>Haití</option>
+                                <option>Honduras</option>
+                                <option>Hungría</option>
+                                <option>India</option>
+                                <option>Indonesia</option>
+                                <option>Irak</option>
+                                <option>Irán</option>
+                                <option>Irlanda</option>
+                                <option>Islandia</option>
+                                <option>Islas Marshall</option>
+                                <option>Islas Salomón</option>
+                                <option>Israel</option>
+                                <option>Italia</option>
+                                <option>Jamaica</option>
+                                <option>Japón</option>
+                                <option>Jordania</option>
+                                <option>Kazajistán</option>
+                                <option>Kenia</option>
+                                <option>Kirguistán</option>
+                                <option>Kiribati</option>
+                                <option>Kuwait</option>
+                                <option>Laos</option>
+                                <option>Lesoto</option>
+                                <option>Letonia</option>
+                                <option>Líbano</option>
+                                <option>Liberia</option>
+                                <option>Libia</option>
+                                <option>Liechtenstein</option>
+                                <option>Lituania</option>
+                                <option>Luxemburgo</option>
+                                <option>Macedonia del Norte</option>
+                                <option>Madagascar</option>
+                                <option>Malasia</option>
+                                <option>Malaui</option>
+                                <option>Maldivas</option>
+                                <option>Malí</option>
+                                <option>Malta</option>
+                                <option>Marruecos</option>
+                                <option>Mauricio</option>
+                                <option>Mauritania</option>
+                                <option>México</option>
+                                <option>Micronesia</option>
+                                <option>Moldavia</option>
+                                <option>Mónaco</option>
+                                <option>Mongolia</option>
+                                <option>Montenegro</option>
+                                <option>Mozambique</option>
+                                <option>Namibia</option>
+                                <option>Nauru</option>
+                                <option>Nepal</option>
+                                <option>Nicaragua</option>
+                                <option>Níger</option>
+                                <option>Nigeria</option>
+                                <option>Noruega</option>
+                                <option>Nueva Zelanda</option>
+                                <option>Omán</option>
+                                <option>Países Bajos</option>
+                                <option>Pakistán</option>
+                                <option>Palaos</option>
+                                <option>Panamá</option>
+                                <option>Papúa Nueva Guinea</option>
+                                <option>Paraguay</option>
+                                <option>Perú</option>
+                                <option>Polonia</option>
+                                <option>Portugal</option>
+                                <option>Reino Unido</option>
+                                <option>República Centroafricana</option>
+                                <option>República Checa</option>
+                                <option>República del Congo</option>
+                                <option>República Democrática del Congo</option>
+                                <option>República Dominicana</option>
+                                <option>Ruanda</option>
+                                <option>Rumanía</option>
+                                <option>Rusia</option>
+                                <option>Samoa</option>
+                                <option>San Cristóbal y Nieves</option>
+                                <option>San Marino</option>
+                                <option>San Vicente y las Granadinas</option>
+                                <option>Santa Lucía</option>
+                                <option>Santo Tomé y Príncipe</option>
+                                <option>Senegal</option>
+                                <option>Serbia</option>
+                                <option>Seychelles</option>
+                                <option>Sierra Leona</option>
+                                <option>Singapur</option>
+                                <option>Siria</option>
+                                <option>Somalia</option>
+                                <option>Sri Lanka</option>
+                                <option>Suazilandia</option>
+                                <option>Sudáfrica</option>
+                                <option>Sudán</option>
+                                <option>Sudán del Sur</option>
+                                <option>Suecia</option>
+                                <option>Suiza</option>
+                                <option>Surinam</option>
+                                <option>Tailandia</option>
+                                <option>Tanzania</option>
+                                <option>Tayikistán</option>
+                                <option>Timor Oriental</option>
+                                <option>Togo</option>
+                                <option>Tonga</option>
+                                <option>Trinidad y Tobago</option>
+                                <option>Túnez</option>
+                                <option>Turkmenistán</option>
+                                <option>Turquía</option>
+                                <option>Tuvalu</option>
+                                <option>Ucrania</option>
+                                <option>Uganda</option>
+                                <option>Uruguay</option>
+                                <option>Uzbekistán</option>
+                                <option>Vanuatu</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea class="form-control" name="comentarios" cols="100" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-danger col-md-2" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <a href="https://api.whatsapp.com/send?phone=56994535974&app=facebook&entry_point=page_cta"><img class="whatsappIcon" src="../img/whatsapp.png" alt=""></a>
+    <footer class="row body__footer--setFormato">
+        <em class="footer__leyenda--setFormato">Dirección: Camino la piedra #1345 - Comuna: Temuco - Chile - <a href="pasteleria.amazing.grace@gmail.com" class="footer__emailLink--setFormato">Correo electónico</a></em>
+    </footer>
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

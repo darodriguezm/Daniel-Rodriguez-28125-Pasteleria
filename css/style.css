@@ -12,6 +12,10 @@ https://coolors.co/797d62-9b9b7a-d9ae94-f1dca7-fcf8ed-ffcb69-d08c60-997b66
   aside.seccionRedesSociales {
     padding-top: 10px;
   }
+
+  .seccionRedesSociales p {
+    visibility: hidden;
+  }
 }
 @media only screen and (max-width: 582px) {
   aside.seccionRedesSociales {

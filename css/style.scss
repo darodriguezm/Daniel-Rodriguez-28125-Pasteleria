@@ -21,6 +21,9 @@ $titlesTextColor: white;
     aside.seccionRedesSociales {
         padding-top: 10px;
     }
+    .seccionRedesSociales p {
+        visibility: hidden;
+    }
 }
 
 @media only screen and (max-width: 582px) {

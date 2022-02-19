@@ -234,6 +234,8 @@ fieldset legend {
 .redesSocialesLinks li {
   display: inline-block;
   font-family: "Catamaran", sans-serif;
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
 .redesSocialesLinks a img {
   width: 16px;

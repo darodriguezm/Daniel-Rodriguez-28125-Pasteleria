@@ -254,6 +254,8 @@ fieldset {
     li {
         display: inline-block;
         font-family: 'Catamaran', sans-serif;
+        animation: fadeInRight;
+        animation-duration: 1s;
     }
     a img {
         width: 16px;

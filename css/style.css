@@ -3,12 +3,12 @@
 https://coolors.co/797d62-9b9b7a-d9ae94-f1dca7-fcf8ed-ffcb69-d08c60-997b66
 */
 /* Paleta de colores */
-@media only screen and (max-width: 898px) {
+@media only screen and (max-width: 1056px) {
   aside.seccionRedesSociales {
     padding-top: 5px;
   }
 }
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 692px) {
   aside.seccionRedesSociales {
     padding-top: 10px;
   }
@@ -20,6 +20,28 @@ https://coolors.co/797d62-9b9b7a-d9ae94-f1dca7-fcf8ed-ffcb69-d08c60-997b66
 @media only screen and (max-width: 582px) {
   aside.seccionRedesSociales {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 529px) {
+  #mobileNav {
+    display: flex;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  #mobileNav .active {
+    background: lightblue;
+  }
+}
+#headerNav {
+  display: none;
+}
+
+@media only screen and (min-width: 530px) {
+  #mobileNav {
+    display: none;
+  }
+
+  #headerNav {
+    display: grid;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -75,6 +97,10 @@ ul li {
 }
 
 /* Estilos generales */
+.bg-marron {
+  background: #800000;
+}
+
 .breadcrumb {
   background-color: transparent;
   font-size: 14px;

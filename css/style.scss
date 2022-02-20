@@ -11,13 +11,14 @@ $linkRegular: #800000;
 $linkVisited: #800000;
 $fildsetBackground: white;
 $titlesTextColor: white;
-@media only screen and (max-width: 898px) {
+$backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
+@media only screen and (max-width: 1056px) {
     aside.seccionRedesSociales {
         padding-top: 5px;
     }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 692px) {
     aside.seccionRedesSociales {
         padding-top: 10px;
     }
@@ -29,6 +30,31 @@ $titlesTextColor: white;
 @media only screen and (max-width: 582px) {
     aside.seccionRedesSociales {
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 529px) {
+    // Creación del menú sandwish
+    #mobileNav {
+        display: flex;
+        background: $backgroundWhiteAlpha;
+        .active {
+            background: lightblue;
+        }
+    }
+}
+
+#headerNav {
+    display: none;
+}
+
+@media only screen and (min-width: 530px) {
+    // Creación del menú sandwish
+    #mobileNav {
+        display: none;
+    }
+    #headerNav {
+        display: grid;
     }
 }
 
@@ -57,7 +83,6 @@ $titlesTextColor: white;
     padding: 0px;
 }
 
-$backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
 @mixin marginSimetrico($direccion, $valor) {
     @if $direccion==vertical {
         margin: $valor 0 $valor 0;
@@ -93,6 +118,10 @@ ul {
 
 
 /* Estilos generales */
+
+.bg-marron {
+    background: $linkRegular;
+}
 
 .breadcrumb {
     background-color: transparent;

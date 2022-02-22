@@ -12,7 +12,7 @@ $linkVisited: #800000;
 $fildsetBackground: white;
 $titlesTextColor: white;
 $backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
-@media only screen and (max-width: 1056px) {
+@media only screen and (max-width: 1075px) {
     aside.seccionRedesSociales {
         padding-top: 5px;
     }
@@ -33,7 +33,7 @@ $backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
     }
 }
 
-@media only screen and (max-width: 529px) {
+@media only screen and (max-width: 550px) {
     // Creación del menú sandwish
     #mobileNav {
         display: flex;
@@ -42,13 +42,12 @@ $backgroundWhiteAlpha: rgba(255, 255, 255, 0.6);
             background: lightblue;
         }
     }
+    #headerNav {
+        display: none;
+    }
 }
 
-#headerNav {
-    display: none;
-}
-
-@media only screen and (min-width: 530px) {
+@media only screen and (min-width: 551px) {
     // Creación del menú sandwish
     #mobileNav {
         display: none;
